@@ -1,0 +1,129 @@
+{
+  "project_context": {
+    "app_type": "Developer Personal Portfolio",
+    "vibe": "Dark Editorial, bold typography, minimal, 2026 high-end design (Awwwards style)",
+    "key_functionalities": [
+      "Hero with massive typography and typewriter effect",
+      "About me with dark moody portrait",
+      "What I Do services list",
+      "Projects grid with Tabs filtering, search, and 3D tilt hover effect",
+      "Work Experience interactive vertical timeline",
+      "Skills marquee with progress bars",
+      "Blog/Articles demo section",
+      "Testimonials carousel",
+      "GitHub contribution graph (mocked)",
+      "Command palette (Ctrl+K)",
+      "Contact form with sonner toast (demo mode)",
+      "Social links including Discord",
+      "Custom animated cursor",
+      "Footer tech stack marquee"
+    ]
+  },
+  "typography": {
+    "primary_heading_font": "Cormorant Garamond",
+    "secondary_body_font": "Manrope",
+    "mono_font": "JetBrains Mono",
+    "rules": [
+      "Headings (H1/H2) MUST use Cormorant Garamond with tight tracking (tracking-tighter) and light-to-regular font weights to emulate luxury editorial magazines.",
+      "H1 should be massive on desktop (text-6xl or clamped size up to 5vw) and scale down gracefully on mobile.",
+      "Body text MUST use Manrope for high legibility.",
+      "Use JetBrains Mono for small tech labels, metadata, command palette hints, and overlines (uppercase, tracking-widest)."
+    ]
+  },
+  "colors": {
+    "archetype": "Dark Editorial / Swiss Brutalist",
+    "background": "#050505",
+    "surface": "#111111",
+    "surface_hover": "#1A1A1A",
+    "text_primary": "#EDEDED",
+    "text_secondary": "#888888",
+    "border": "#222222",
+    "accent": "#FFFFFF",
+    "rules": [
+      "DO NOT use generic purple or blue gradients. Color palette must be strictly monochromatic to let the typography and images stand out.",
+      "Use extremely subtle borders (border-white/10) to separate sections rather than heavy cards.",
+      "Never use pure black #000000 for text or white #FFFFFF for backgrounds.",
+      "DO NOT use complete transparent background in header, overlays, any surface that has content under it."
+    ]
+  },
+  "layouts": {
+    "spacing": "Generous spacing. Use py-24 or py-32 for section padding. gap-12 or gap-16 for grid items.",
+    "projects_grid": "Bento-style or masonry-like asymmetrical grid. Mix wide items (col-span-2) with tall items (row-span-2).",
+    "hero_section": "Typographic focus. Massive text taking up 70% of the screen. No standard split left/right layout unless heavily asymmetric."
+  },
+  "motion": {
+    "cursor": "Implement a custom trailing cursor using framer-motion that inverted-blends with text.",
+    "scroll": "Use Lenis for smooth momentum scrolling.",
+    "cards": "Use react-parallax-tilt for a 3D glass glare effect on project cards.",
+    "page_transitions": "Staggered fade-up for grid items and text lines on scroll (use framer-motion variants)."
+  },
+  "components": {
+    "shadcn_ui": [
+      "Command (for Ctrl+K palette)",
+      "Tabs (for project filtering)",
+      "Dialog (for contact or modal views)",
+      "Carousel (for testimonials)",
+      "Form/Input (for contact section)",
+      "Sonner (for toast notifications)"
+    ],
+    "custom": [
+      "Typewriter effect component for hero",
+      "Skills Marquee (using react-fast-marquee)",
+      "Mock GitHub contribution graph (SVG or flex grid of small squares)",
+      "Vertical interactive timeline for experience"
+    ]
+  },
+  "image_urls": {
+    "about_me_portrait": {
+      "url": "https://images.unsplash.com/photo-1565120130276-dfbd9a7a3ad7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwzfHxtYW4lMjBjb2RpbmclMjBkYXJrJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzg0MTI1NTkyfDA&ixlib=rb-4.1.0&q=85",
+      "description": "Dark moody portrait of a man coding, ideal for the About section."
+    },
+    "project_1": {
+      "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwZGFyayUyMGRhc2hib2FyZCUyMHVpfGVufDB8fHx8MTc4NDEyNTU5Mnww&ixlib=rb-4.1.0&q=85",
+      "description": "Analytics dashboard screenshot for Project 1."
+    },
+    "project_2": {
+      "url": "https://images.unsplash.com/photo-1666027092835-7e668416b7c8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwZGFyayUyMGRhc2hib2FyZCUyMHVpfGVufDB8fHx8MTc4NDEyNTU5Mnww&ixlib=rb-4.1.0&q=85",
+      "description": "Minimalist computer screen for Project 2."
+    },
+    "blog_cover_1": {
+      "url": "https://images.unsplash.com/photo-1517241034903-9a4c3ab12f00?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMDNkJTIwYXJ0JTIwZGFya3xlbnwwfHx8fDE3ODQxMjU1OTJ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Abstract black and white wavy shapes for article thumbnail."
+    },
+    "blog_cover_2": {
+      "url": "https://images.unsplash.com/photo-1622737133809-d95047b9e673?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMDNkJTIwYXJ0JTIwZGFya3xlbnwwfHx8fDE3ODQxMjU1OTJ8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Dark 3D geometric abstract for article thumbnail."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Use JavaScript (.js/.jsx) for all components. Do NOT use TypeScript (.tsx).",
+    "Setup a single-page smooth scroll layout (using Lenis) with anchor links for sections.",
+    "Implement a Dark Theme by default. You may skip light theme to preserve the editorial vibe.",
+    "Make sure the contact form is non-functional but triggers a success Toast using Sonner.",
+    "Replace Instagram with a Discord link in the footer and socials component.",
+    "Create a mocked GitHub contribution graph using a grid of small divs with varying opacities of a single color (e.g., white or grey).",
+    "Add a Command Palette (Ctrl+K) that allows jumping to sections (About, Projects, Experience, Contact) and executing actions like 'Copy Email' or 'Download Resume'.",
+    "Ensure the Custom Cursor is un-intrusive. Disable it on mobile breakpoints.",
+    "All interactive elements and key informational elements MUST have a data-testid attribute.",
+    "DO NOT center align the app container. No '.App { text-align: center; }'.",
+    "Ensure no completely transparent backgrounds on headers that overlap text.",
+    "Use Phosphor icons or Lucide React for modern, crisp iconography. Discord icon is required.",
+    "Do NOT use placeholder image URLs. Use the provided image URLs."
+  ],
+  "accessibility": [
+    "Ensure contrast ratios meet APCA standards. Off-white on black is excellent.",
+    "Add aria-hidden='true' to purely decorative elements like the background textures or custom cursor.",
+    "Respect prefers-reduced-motion for all framer-motion animations."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Create depth through layered design elements with z-index hierarchy.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Never use AI assistant Emoji characters for icons.",
+    "Ensure text must be left aligned by default for natural reading flow.",
+    "Use pre-existing Shadcn UI components in src/components/ui where possible, customizing them heavily with Tailwind.",
+    "All interactive and key informational elements MUST include a data-testid attribute to facilitate robust automated testing."
+  ]
+}

@@ -1,0 +1,92 @@
+import { CONTRIBUTIONS } from "../data/portfolio";
+
+const shades = ["#111", "#2a2a2a", "#555", "#9a9a9a", "#ededed"];
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+const GitHubGraph = () => {
+  const weeks = [];
+  for (let w = 0; w < 26; w++) {
+    weeks.push(CONTRIBUTIONS.slice(w * 7, w * 7 + 7));
+  }
+  const total = CONTRIBUTIONS.reduce((a, b) => a + b, 0);
+  const streak = 27; // demo
+
+  return (
+    <section
+      id="github"
+      data-testid="github-section"
+      className="relative py-24 md:py-32 px-6 md:px-10 border-t border-white/5"
+    >
+      <div className="max-w-[1400px] mx-auto">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+          <div>
+            <p className="eyebrow mb-4">// Public activity</p>
+            <h2 className="hero-h text-5xl md:text-7xl text-white">
+              Building in <span className="italic">the open.</span>
+            </h2>
+          </div>
+          <div className="flex gap-8 text-sm">
+            <div>
+              <div className="font-serif text-3xl text-white">{total}</div>
+              <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mt-1">
+                Contributions · 6mo
+              </div>
+            </div>
+            <div>
+              <div className="font-serif text-3xl text-white">{streak}</div>
+              <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mt-1">
+                Day streak
+              </div>
+            </div>
+            <div>
+              <div className="font-serif text-3xl text-white">42</div>
+              <div className="text-[10px] font-mono uppercase tracking-widest text-white/40 mt-1">
+                Public repos
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border border-white/10 bg-[#0a0a0a] p-6 md:p-10 overflow-x-auto no-scrollbar">
+          <div className="min-w-[720px]">
+            <div className="flex gap-[3px] mb-2 ml-6">
+              {months.slice(0, 6).map((m) => (
+                <span
+                  key={m}
+                  className="text-[10px] font-mono uppercase tracking-widest text-white/40 flex-1"
+                >
+                  {m}
+                </span>
+              ))}
+            </div>
+            <div className="flex gap-[3px]" data-testid="github-graph">
+              {weeks.map((w, wi) => (
+                <div key={wi} className="flex flex-col gap-[3px]">
+                  {w.map((v, di) => (
+                    <div
+                      key={di}
+                      className="contrib"
+                      style={{ background: shades[v] }}
+                      title={`${v} contributions`}
+                    />
+                  ))}
+                </div>
+              ))}
+            </div>
+            <div className="mt-6 flex items-center justify-between text-[10px] font-mono uppercase tracking-widest text-white/40">
+              <span>Less</span>
+              <div className="flex gap-1">
+                {shades.map((c, i) => (
+                  <div key={i} className="contrib" style={{ background: c }} />
+                ))}
+              </div>
+              <span>More</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default GitHubGraph;

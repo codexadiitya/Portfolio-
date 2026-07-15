@@ -1,0 +1,7 @@
+/* Root wrapper: no centered layout */
+.App {
+    background: #050505;
+    color: #ededed;
+    min-height: 100vh;
+    text-align: left;
+}
