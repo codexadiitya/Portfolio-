@@ -2,15 +2,9 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const words = [
-  "Hello",      // English
-  "Bonjour",    // French
-  "Ciao",       // Italian
-  "Olá",        // Portuguese
-  "Hallo",      // German
-  "Konnichiwa", // Japanese
-  "Nǐ Hǎo",     // Chinese
-  "Namaste",    // Hindi
-  "नमस्ते"       // Devnagari Namaste
+  "Namaste",
+  "Hello",
+  "Bonjour"
 ];
 
 const Loader = ({ onDone }) => {
@@ -18,14 +12,14 @@ const Loader = ({ onDone }) => {
 
   useEffect(() => {
     if (index === words.length - 1) {
-      const t = setTimeout(onDone, 800);
+      const t = setTimeout(onDone, 900);
       return () => clearTimeout(t);
     }
     const t = setTimeout(
       () => {
         setIndex((i) => i + 1);
       },
-      index === 0 ? 350 : 150
+      index === 0 ? 800 : 600
     );
     return () => clearTimeout(t);
   }, [index, onDone]);
@@ -50,10 +44,10 @@ const Loader = ({ onDone }) => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -30 }}
-            transition={{ duration: 0.25, ease: "easeOut" }}
-            className="flex items-center gap-4 text-5xl md:text-7xl font-serif italic text-white"
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            className="flex items-center gap-4 text-5xl md:text-7xl font-serif italic text-[#DFBA73]"
           >
-            <span className="w-2.5 h-2.5 rounded-full bg-white block animate-pulse" />
+            <span className="w-2.5 h-2.5 rounded-full bg-[#DFBA73] block animate-pulse" />
             <span>{words[index]}</span>
           </motion.div>
         </div>
