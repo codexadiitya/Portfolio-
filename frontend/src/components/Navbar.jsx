@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, X, Command, Sun, Moon } from "lucide-react";
+import { Menu, X, Command } from "lucide-react";
 
 const links = [
   { label: "Index", href: "#home" },
@@ -9,7 +9,7 @@ const links = [
   { label: "Contact", href: "#contact" },
 ];
 
-const Navbar = ({ onOpenPalette, theme, onToggleTheme }) => {
+const Navbar = ({ onOpenPalette }) => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -52,14 +52,6 @@ const Navbar = ({ onOpenPalette, theme, onToggleTheme }) => {
 
         <div className="hidden md:flex items-center gap-3">
           <button
-            onClick={onToggleTheme}
-            data-testid="nav-theme-toggle"
-            className="flex items-center justify-center border border-foreground/15 hover:border-foreground/40 p-2 text-foreground/70 hover:text-foreground rounded-full transition-all"
-            aria-label="Toggle Theme"
-          >
-            {theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
-          </button>
-          <button
             onClick={onOpenPalette}
             data-testid="nav-command-btn"
             className="flex items-center gap-2 border border-foreground/15 hover:border-foreground/40 px-3 py-1.5 text-[10px] font-mono tracking-widest uppercase text-foreground/70 hover:text-foreground transition-all"
@@ -69,24 +61,14 @@ const Navbar = ({ onOpenPalette, theme, onToggleTheme }) => {
           </button>
         </div>
 
-        <div className="flex md:hidden items-center gap-3">
-          <button
-            onClick={onToggleTheme}
-            data-testid="nav-mobile-theme-toggle"
-            className="flex items-center justify-center border border-foreground/15 hover:border-foreground/40 p-2 text-foreground/70 hover:text-foreground rounded-full transition-all"
-            aria-label="Toggle Theme"
-          >
-            {theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
-          </button>
-          <button
-            className="text-foreground"
-            onClick={() => setOpen(!open)}
-            data-testid="nav-mobile-toggle"
-            aria-label="menu"
-          >
-            {open ? <X size={22} /> : <Menu size={22} />}
-          </button>
-        </div>
+        <button
+          className="text-foreground md:hidden"
+          onClick={() => setOpen(!open)}
+          data-testid="nav-mobile-toggle"
+          aria-label="menu"
+        >
+          {open ? <X size={22} /> : <Menu size={22} />}
+        </button>
       </nav>
 
       {open && (

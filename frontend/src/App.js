@@ -22,7 +22,6 @@ import Loader from "./components/Loader";
 function App() {
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [theme, setTheme] = useState("light"); // Default theme is light
 
   useEffect(() => {
     // Fallback in case loader doesn't finish for any reason
@@ -30,29 +29,12 @@ function App() {
     return () => clearTimeout(t);
   }, []);
 
-  useEffect(() => {
-    const root = window.document.documentElement;
-    if (theme === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "dark" ? "light" : "dark"));
-  };
-
   return (
     <div className="App grain" data-testid="app-root">
       {loading && <Loader onDone={() => setLoading(false)} />}
 
       <CustomCursor />
-      <Navbar
-        onOpenPalette={() => setPaletteOpen(true)}
-        theme={theme}
-        onToggleTheme={toggleTheme}
-      />
+      <Navbar onOpenPalette={() => setPaletteOpen(true)} />
       <CommandPalette open={paletteOpen} setOpen={setPaletteOpen} />
 
       <main>
@@ -71,13 +53,13 @@ function App() {
       <Footer />
 
       <Toaster
-        theme={theme}
+        theme="dark"
         position="bottom-right"
         toastOptions={{
           style: {
-            background: theme === "dark" ? "#0a0a0a" : "#f2ece0",
-            border: theme === "dark" ? "1px solid rgba(255,255,255,0.15)" : "1px solid rgba(0,0,0,0.15)",
-            color: theme === "dark" ? "#ededed" : "#141414",
+            background: "#0a0a0a",
+            border: "1px solid rgba(255,255,255,0.15)",
+            color: "#ededed",
             fontFamily: "Manrope, sans-serif",
           },
         }}
