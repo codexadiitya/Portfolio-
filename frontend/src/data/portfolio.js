@@ -8,8 +8,7 @@ export const PROFILE = {
   bio: "I engineer bespoke digital products that live at the intersection of craft, systems and machine intelligence. Currently obsessed with agentic UX and typography.",
   availability: "Available for select 2026 projects",
   resume: "#resume-demo",
-  portrait:
-    "https://images.unsplash.com/photo-1565120130276-dfbd9a7a3ad7?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwzfHxtYW4lMjBjb2RpbmclMjBkYXJrJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzg0MTI1NTkyfDA&ixlib=rb-4.1.0&q=85",
+  portrait: "/aditya_portrait.jpg",
   socials: [
     { label: "GitHub", handle: "adityadiwan", href: "https://github.com/adityadiwan" },
     { label: "LinkedIn", handle: "in/adityadiwan28", href: "https://linkedin.com/in/adityadiwan28" },
