@@ -61,7 +61,7 @@ const Contact = () => {
               data-cursor="hover"
               className="group flex items-center justify-between w-full md:max-w-md border-b border-border hover:border-foreground pb-3 text-left"
             >
-              <span className="font-serif text-xl md:text-2xl text-foreground group-hover:italic transition-all">
+              <span className="font-serif text-base sm:text-xl md:text-2xl text-foreground group-hover:italic transition-all break-all sm:break-normal">
                 {PROFILE.email}
               </span>
               {copied ? (

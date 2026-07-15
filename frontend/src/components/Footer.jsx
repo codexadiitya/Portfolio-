@@ -30,7 +30,7 @@ const Footer = () => {
       className="relative border-t border-border bg-card"
     >
       {/* Big footer marquee */}
-      <div className="py-16 md:py-24 overflow-hidden">
+      <div className="w-full max-w-full overflow-hidden py-16 md:py-24">
         <Marquee gradient={false} speed={30}>
           <span className="font-serif text-[12vw] md:text-[10vw] leading-none text-foreground/95 tracking-tighter mx-8">
             Let&apos;s build something

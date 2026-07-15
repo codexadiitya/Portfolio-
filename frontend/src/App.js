@@ -30,7 +30,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App grain" data-testid="app-root">
+    <div className="App grain overflow-hidden w-full min-h-screen" data-testid="app-root">
       {loading && <Loader onDone={() => setLoading(false)} />}
 
       <CustomCursor />

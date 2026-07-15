@@ -48,7 +48,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="mt-24 border-y border-border py-8">
+      <div className="w-full max-w-full overflow-hidden mt-24 border-y border-border py-8">
         <Marquee gradient={false} speed={40} className="overflow-hidden">
           {MARQUEE_TECH.map((t, i) => (
             <span
