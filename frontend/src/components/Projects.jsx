@@ -104,8 +104,11 @@ const Projects = () => {
                     perspective={1400}
                     className="h-full"
                   >
-                    <div
-                      className="group h-full border border-white/10 bg-[#0a0a0a] hover:border-white/30 transition-all overflow-hidden flex flex-col"
+                    <a
+                      href={p.link || "#"}
+                      target={p.link ? "_blank" : undefined}
+                      rel={p.link ? "noopener noreferrer" : undefined}
+                      className="group h-full border border-white/10 bg-[#0a0a0a] hover:border-white/30 transition-all overflow-hidden flex flex-col block"
                       data-cursor="hover"
                     >
                       <div className="relative aspect-[16/10] overflow-hidden">
@@ -147,7 +150,7 @@ const Projects = () => {
                           ))}
                         </div>
                       </div>
-                    </div>
+                    </a>
                   </Tilt>
                 </motion.div>
               );

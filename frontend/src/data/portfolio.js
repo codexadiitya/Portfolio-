@@ -53,10 +53,10 @@ export const PROJECTS = [
     year: "2026",
     category: "Web",
     stack: ["React", "Tailwind CSS", "Framer Motion", "Lenis"],
+    link: "https://bharat-live.vercel.app",
     description:
       "A premium, dark editorial developer portfolio website with smooth momentum scroll, 3D card tilt glare, custom cursor, and built-in command palette.",
-    image:
-      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?crop=entropy&cs=srgb&fm=jpg&q=85",
+    image: "/aditya_portfolio_preview.jpg",
     featured: true,
   },
   {
@@ -66,6 +66,7 @@ export const PROJECTS = [
     year: "2026",
     category: "Web",
     stack: ["Next.js 15", "Postgres", "tRPC", "Tailwind"],
+    link: "https://github.com/codexadiitya",
     description:
       "A real-time observability dashboard for LLM applications. Traces, evals and cost — in one bento canvas.",
     image:
@@ -79,6 +80,7 @@ export const PROJECTS = [
     year: "2025",
     category: "ML",
     stack: ["PyTorch", "FastAPI", "React"],
+    link: "https://github.com/codexadiitya",
     description:
       "A visual playground to fine-tune diffusion and small language models with a single YAML file.",
     image:
@@ -87,15 +89,16 @@ export const PROJECTS = [
   },
   {
     id: "p3",
-    slug: "kiosk",
-    title: "Kiosk OS",
-    year: "2025",
-    category: "Design",
-    stack: ["Figma", "Motion", "Design Tokens"],
+    slug: "ssipmt-portal",
+    title: "SSIPMT Portal",
+    year: "2026",
+    category: "Web",
+    stack: ["React", "Tailwind CSS", "Netlify", "Under Development"],
+    link: "https://ssipmtportal.netlify.app/",
     description:
-      "A design system for kiosk hardware — high-contrast, gesture-first, deployed to 400+ retail locations.",
+      "An interactive student and academic management portal for SSIPMT. (Under Development)",
     image:
-      "https://images.unsplash.com/photo-1517241034903-9a4c3ab12f00?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwzfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMDNkJTIwYXJ0JTIwZGFya3xlbnwwfHx8fDE3ODQxMjU1OTJ8MA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1517241034903-9a4c3ab12f00?crop=entropy&cs=srgb&fm=jpg&q=85",
     featured: false,
   },
   {
@@ -105,6 +108,7 @@ export const PROJECTS = [
     year: "2024",
     category: "ML",
     stack: ["Python", "Qdrant", "OpenAI"],
+    link: "https://github.com/codexadiitya",
     description:
       "Semantic search across 12M product SKUs with a 42ms p95 — replaced a legacy ElasticSearch cluster.",
     image:
@@ -118,6 +122,7 @@ export const PROJECTS = [
     year: "2024",
     category: "Web",
     stack: ["React", "SQLite", "Tauri"],
+    link: "https://github.com/codexadiitya",
     description:
       "An offline-first, local-first personal finance OS. Zero SaaS, zero telemetry, one binary.",
     image:
@@ -131,6 +136,7 @@ export const PROJECTS = [
     year: "2023",
     category: "Design",
     stack: ["Astro", "GSAP", "Cloudflare"],
+    link: "https://github.com/codexadiitya",
     description:
       "A specimen site for an independent type foundry — an editorial exercise in restraint and rhythm.",
     image:
