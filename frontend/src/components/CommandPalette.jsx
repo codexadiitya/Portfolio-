@@ -86,18 +86,18 @@ const CommandPalette = ({ open, setOpen }) => {
       data-testid="command-palette-backdrop"
     >
       <div
-        className="w-full max-w-xl bg-[#0a0a0a] border border-white/15 shadow-2xl overflow-hidden"
+        className="w-full max-w-xl bg-card border border-border shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
         data-testid="command-palette"
       >
-        <div className="p-4 border-b border-white/10">
+        <div className="p-4 border-b border-border">
           <input
             autoFocus
             value={q}
             onChange={(e) => setQ(e.target.value)}
             placeholder="Type a command or search..."
             data-testid="command-palette-input"
-            className="w-full bg-transparent outline-none text-white text-sm font-mono placeholder:text-white/30"
+            className="w-full bg-transparent outline-none text-foreground text-sm font-mono placeholder:text-foreground/30"
           />
         </div>
         <ul className="max-h-[50vh] overflow-y-auto py-2">
@@ -106,12 +106,12 @@ const CommandPalette = ({ open, setOpen }) => {
               <button
                 onClick={it.action}
                 data-testid={`command-item-${i}`}
-                className="w-full flex items-center gap-3 px-4 py-3 text-sm text-white/80 hover:bg-white/5 hover:text-white text-left"
+                className="w-full flex items-center gap-3 px-4 py-3 text-sm text-foreground/80 hover:bg-foreground/5 hover:text-foreground text-left"
               >
-                <it.icon size={16} className="text-white/50" />
+                <it.icon size={16} className="text-foreground/50" />
                 <span className="flex-1">{it.label}</span>
                 {it.kbd && (
-                  <kbd className="text-[10px] font-mono uppercase tracking-widest text-white/40 border border-white/15 px-1.5 py-0.5">
+                  <kbd className="text-[10px] font-mono uppercase tracking-widest text-foreground/40 border border-border px-1.5 py-0.5">
                     {it.kbd}
                   </kbd>
                 )}
@@ -119,12 +119,12 @@ const CommandPalette = ({ open, setOpen }) => {
             </li>
           ))}
           {filtered.length === 0 && (
-            <li className="px-4 py-6 text-xs font-mono uppercase tracking-widest text-white/40">
+            <li className="px-4 py-6 text-xs font-mono uppercase tracking-widest text-foreground/40">
               No results.
             </li>
           )}
         </ul>
-        <div className="border-t border-white/10 px-4 py-2 flex justify-between text-[10px] font-mono uppercase tracking-widest text-white/40">
+        <div className="border-t border-border px-4 py-2 flex justify-between text-[10px] font-mono uppercase tracking-widest text-foreground/40">
           <span>↑↓ Navigate · ↵ Select</span>
           <span>Esc to close</span>
         </div>

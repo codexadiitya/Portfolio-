@@ -27,38 +27,38 @@ const Footer = () => {
   return (
     <footer
       data-testid="site-footer"
-      className="relative border-t border-white/10 bg-[#080808]"
+      className="relative border-t border-border bg-card"
     >
       {/* Big footer marquee */}
       <div className="py-16 md:py-24 overflow-hidden">
         <Marquee gradient={false} speed={30}>
-          <span className="font-serif text-[12vw] md:text-[10vw] leading-none text-white/95 tracking-tighter mx-8">
+          <span className="font-serif text-[12vw] md:text-[10vw] leading-none text-foreground/95 tracking-tighter mx-8">
             Let&apos;s build something
           </span>
-          <span className="font-serif italic text-[12vw] md:text-[10vw] leading-none text-white/40 tracking-tighter mx-8">
+          <span className="font-serif italic text-[12vw] md:text-[10vw] leading-none text-foreground/40 tracking-tighter mx-8">
             &nbsp;bespoke.&nbsp;
           </span>
-          <span className="font-serif text-[12vw] md:text-[10vw] leading-none text-white/95 tracking-tighter mx-8">
+          <span className="font-serif text-[12vw] md:text-[10vw] leading-none text-foreground/95 tracking-tighter mx-8">
             Let&apos;s build something
           </span>
-          <span className="font-serif italic text-[12vw] md:text-[10vw] leading-none text-white/40 tracking-tighter mx-8">
+          <span className="font-serif italic text-[12vw] md:text-[10vw] leading-none text-foreground/40 tracking-tighter mx-8">
             &nbsp;bespoke.&nbsp;
           </span>
         </Marquee>
       </div>
 
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 pb-12">
-        <div className="grid grid-cols-12 gap-8 border-t border-white/10 pt-12">
+        <div className="grid grid-cols-12 gap-8 border-t border-border pt-12">
           <div className="col-span-12 md:col-span-4">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-6 h-6 border border-white/40 rotate-45 flex items-center justify-center">
-                <div className="w-1.5 h-1.5 bg-white -rotate-45" />
+              <div className="w-6 h-6 border border-foreground/40 rotate-45 flex items-center justify-center">
+                <div className="w-1.5 h-1.5 bg-foreground -rotate-45" />
               </div>
-              <span className="font-mono text-xs uppercase tracking-widest">
+              <span className="font-mono text-xs uppercase tracking-widest text-foreground">
                 {PROFILE.name}
               </span>
             </div>
-            <p className="text-sm text-white/55 max-w-xs">
+            <p className="text-sm text-foreground/55 max-w-xs">
               {PROFILE.location} — freelance & full-time. Currently taking on
               select 2026 briefs.
             </p>
@@ -71,7 +71,7 @@ const Footer = () => {
                 <li key={l}>
                   <a
                     href={`#${l.toLowerCase() === "projects" ? "projects" : l.toLowerCase() === "journal" ? "blog" : l.toLowerCase()}`}
-                    className="text-white/70 hover:text-white nav-link"
+                    className="text-foreground/70 hover:text-foreground nav-link"
                     data-testid={`footer-nav-${l.toLowerCase()}`}
                   >
                     {l}
@@ -92,13 +92,13 @@ const Footer = () => {
                       href={s.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-3 text-white/70 hover:text-white group"
+                      className="inline-flex items-center gap-3 text-foreground/70 hover:text-foreground group"
                       data-testid={`footer-social-${s.label.toLowerCase().replace(/\s|\/|,/g, "-")}`}
                       data-cursor="hover"
                     >
                       <Icon size={16} />
                       <span>{s.label}</span>
-                      <span className="text-white/30 group-hover:text-white/60 text-xs font-mono">
+                      <span className="text-foreground/30 group-hover:text-foreground/60 text-xs font-mono">
                         {s.handle}
                       </span>
                     </a>
@@ -110,14 +110,14 @@ const Footer = () => {
 
           <div className="col-span-12 md:col-span-2">
             <p className="eyebrow mb-4">Colophon</p>
-            <p className="text-xs text-white/50 leading-relaxed">
+            <p className="text-xs text-foreground/50 leading-relaxed">
               Built with React, Tailwind & Framer Motion. Set in Cormorant &
               Manrope.
             </p>
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[10px] font-mono uppercase tracking-widest text-white/40">
+        <div className="mt-16 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-[10px] font-mono uppercase tracking-widest text-foreground/40">
           <span data-testid="footer-copy">
             © 2026 {PROFILE.name} — All rights reserved.
           </span>

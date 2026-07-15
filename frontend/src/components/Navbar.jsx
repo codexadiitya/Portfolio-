@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, X, Command } from "lucide-react";
+import { Menu, X, Command, Sun, Moon } from "lucide-react";
 
 const links = [
   { label: "Index", href: "#home" },
@@ -9,7 +9,7 @@ const links = [
   { label: "Contact", href: "#contact" },
 ];
 
-const Navbar = ({ onOpenPalette }) => {
+const Navbar = ({ onOpenPalette, theme, onToggleTheme }) => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -23,16 +23,16 @@ const Navbar = ({ onOpenPalette }) => {
     <header
       data-testid="site-navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled ? "bg-[#050505]/85 backdrop-blur-md border-b border-white/5" : "bg-transparent"
+        scrolled ? "bg-background/85 backdrop-blur-md border-b border-border" : "bg-transparent"
       }`}
     >
       <nav className="max-w-[1400px] mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
         <a href="#home" data-testid="nav-logo" className="flex items-center gap-3">
-          <div className="w-8 h-8 border border-white/30 rotate-45 flex items-center justify-center">
-            <div className="w-2 h-2 bg-white -rotate-45" />
+          <div className="w-8 h-8 border border-foreground/30 rotate-45 flex items-center justify-center">
+            <div className="w-2 h-2 bg-foreground -rotate-45" />
           </div>
-          <span className="font-mono text-xs tracking-[0.2em] uppercase text-white/70">
-            Aditya&nbsp;/&nbsp;<span className="text-white">Diwan</span>
+          <span className="font-mono text-xs tracking-[0.2em] uppercase text-foreground/70">
+            Aditya&nbsp;/&nbsp;<span className="text-foreground">Diwan</span>
           </span>
         </a>
 
@@ -41,10 +41,10 @@ const Navbar = ({ onOpenPalette }) => {
             <a
               key={l.href}
               href={l.href}
-              className="nav-link text-white/70 hover:text-white"
+              className="nav-link text-foreground/70 hover:text-foreground"
               data-testid={`nav-link-${l.label.toLowerCase()}`}
             >
-              <span className="text-white/40 mr-1">0{i + 1}.</span>
+              <span className="text-foreground/40 mr-1">0{i + 1}.</span>
               {l.label}
             </a>
           ))}
@@ -52,33 +52,51 @@ const Navbar = ({ onOpenPalette }) => {
 
         <div className="hidden md:flex items-center gap-3">
           <button
+            onClick={onToggleTheme}
+            data-testid="nav-theme-toggle"
+            className="flex items-center justify-center border border-foreground/15 hover:border-foreground/40 p-2 text-foreground/70 hover:text-foreground rounded-full transition-all"
+            aria-label="Toggle Theme"
+          >
+            {theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
+          </button>
+          <button
             onClick={onOpenPalette}
             data-testid="nav-command-btn"
-            className="flex items-center gap-2 border border-white/15 hover:border-white/40 px-3 py-1.5 text-[10px] font-mono tracking-widest uppercase text-white/70 hover:text-white transition-all"
+            className="flex items-center gap-2 border border-foreground/15 hover:border-foreground/40 px-3 py-1.5 text-[10px] font-mono tracking-widest uppercase text-foreground/70 hover:text-foreground transition-all"
           >
             <Command size={12} />
             <span>Ctrl K</span>
           </button>
         </div>
 
-        <button
-          className="md:hidden text-white"
-          onClick={() => setOpen(!open)}
-          data-testid="nav-mobile-toggle"
-          aria-label="menu"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div className="flex md:hidden items-center gap-3">
+          <button
+            onClick={onToggleTheme}
+            data-testid="nav-mobile-theme-toggle"
+            className="flex items-center justify-center border border-foreground/15 hover:border-foreground/40 p-2 text-foreground/70 hover:text-foreground rounded-full transition-all"
+            aria-label="Toggle Theme"
+          >
+            {theme === "dark" ? <Sun size={14} /> : <Moon size={14} />}
+          </button>
+          <button
+            className="text-foreground"
+            onClick={() => setOpen(!open)}
+            data-testid="nav-mobile-toggle"
+            aria-label="menu"
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </nav>
 
       {open && (
-        <div className="md:hidden border-t border-white/10 bg-[#050505] px-6 py-8 flex flex-col gap-6 font-mono text-sm tracking-widest uppercase">
+        <div className="md:hidden border-t border-border bg-background px-6 py-8 flex flex-col gap-6 font-mono text-sm tracking-widest uppercase">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="text-white/70 hover:text-white"
+              className="text-foreground/70 hover:text-foreground"
               data-testid={`nav-mobile-link-${l.label.toLowerCase()}`}
             >
               {l.label}

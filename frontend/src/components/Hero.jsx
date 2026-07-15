@@ -48,13 +48,13 @@ const Hero = () => {
       className="relative min-h-screen pt-32 pb-16 px-6 md:px-10 flex flex-col justify-between"
     >
       {/* Top eyebrow row */}
-      <div className="flex justify-between items-start text-[11px] font-mono tracking-widest uppercase text-white/50">
+      <div className="flex justify-between items-start text-[11px] font-mono tracking-widest uppercase text-foreground/55">
         <div className="flex items-center gap-2">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
           {PROFILE.availability}
         </div>
         <div className="hidden sm:block">
-          <span className="text-white/30">Berlin&nbsp;/&nbsp;</span>
+          <span className="text-foreground/30">Berlin&nbsp;/&nbsp;</span>
           <span data-testid="hero-clock">{time} CET</span>
         </div>
       </div>
@@ -70,20 +70,20 @@ const Hero = () => {
           <div className="col-span-12 md:col-span-8">
             <p className="eyebrow mb-6">// Portfolio&nbsp;— MMXXVI</p>
             <h1
-              className="hero-h text-[15vw] md:text-[9.5vw] leading-[0.85] text-white"
+              className="hero-h text-[14vw] sm:text-[12vw] md:text-[9.5vw] leading-[0.85] text-foreground"
               data-testid="hero-heading"
             >
               A studio<br />of one.
             </h1>
           </div>
-          <div className="col-span-12 md:col-span-4 md:pl-8 border-l border-white/10 hidden md:block">
-            <p className="text-sm text-white/70 leading-relaxed max-w-xs font-sans">
+          <div className="col-span-12 md:col-span-4 md:pl-8 border-l border-border hidden md:block">
+            <p className="text-sm text-foreground/70 leading-relaxed max-w-xs font-sans">
               I engineer bespoke digital products at the intersection of{" "}
-              <span className="text-white font-serif italic">craft</span>,{" "}
-              <span className="text-white font-serif italic">systems</span> &{" "}
-              <span className="text-white font-serif italic">machine intelligence</span>.
+              <span className="text-foreground font-serif italic">craft</span>,{" "}
+              <span className="text-foreground font-serif italic">systems</span> &{" "}
+              <span className="text-foreground font-serif italic">machine intelligence</span>.
             </p>
-            <div className="mt-6 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-white/40">
+            <div className="mt-6 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-foreground/40">
               <MapPin size={12} />
               Berlin&nbsp;/&nbsp;Remote
             </div>
@@ -96,11 +96,11 @@ const Hero = () => {
         <div className="flex items-baseline gap-4">
           <span className="eyebrow">Currently&nbsp;→</span>
           <span
-            className="hero-h text-3xl md:text-5xl text-white font-serif italic"
+            className="hero-h text-3xl md:text-5xl text-foreground font-serif italic"
             data-testid="hero-rotating-title"
           >
             {typed}
-            <span className="inline-block w-[2px] h-[0.8em] bg-white align-middle ml-1 animate-pulse" />
+            <span className="inline-block w-[2px] h-[0.8em] bg-foreground align-middle ml-1 animate-pulse" />
           </span>
         </div>
 
@@ -108,7 +108,7 @@ const Hero = () => {
           href="#contact"
           data-testid="hero-cta"
           data-cursor="hover"
-          className="group inline-flex items-center gap-3 border border-white/20 hover:border-white hover:bg-white hover:text-black transition-all px-6 py-3 rounded-full text-xs font-mono tracking-widest uppercase"
+          className="group inline-flex items-center gap-3 border border-foreground/20 hover:border-foreground hover:bg-foreground hover:text-background transition-all px-6 py-3 rounded-full text-xs font-mono tracking-widest uppercase text-foreground"
         >
           Let&apos;s connect
           <ArrowUpRight
@@ -119,8 +119,8 @@ const Hero = () => {
       </div>
 
       {/* Scroll hint */}
-      <div className="mt-16 flex items-center gap-3 text-[10px] font-mono uppercase tracking-widest text-white/30">
-        <span className="w-8 h-px bg-white/30" />
+      <div className="mt-16 flex items-center gap-3 text-[10px] font-mono uppercase tracking-widest text-foreground/30">
+        <span className="w-8 h-px bg-foreground/30" />
         Scroll to explore
       </div>
     </section>

@@ -7,13 +7,13 @@ const Blog = () => {
     <section
       id="blog"
       data-testid="blog-section"
-      className="relative py-24 md:py-32 px-6 md:px-10 border-t border-white/5"
+      className="relative py-16 md:py-28 px-6 md:px-10 border-t border-border"
     >
       <div className="max-w-[1400px] mx-auto">
         <div className="flex items-end justify-between mb-14">
           <div>
             <p className="eyebrow mb-4">// Journal</p>
-            <h2 className="hero-h text-5xl md:text-7xl text-white">
+            <h2 className="hero-h text-5xl md:text-7xl text-foreground">
               Notes &amp; <span className="italic">essays.</span>
             </h2>
           </div>
@@ -21,7 +21,7 @@ const Blog = () => {
             href="#"
             data-testid="blog-all-link"
             data-cursor="hover"
-            className="hidden md:inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-white/60 hover:text-white"
+            className="hidden md:inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-foreground/60 hover:text-foreground"
           >
             All entries <ArrowUpRight size={14} />
           </a>
@@ -36,11 +36,11 @@ const Blog = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="group block border border-white/10 hover:border-white/30 transition-all"
+              className="group block border border-border bg-card hover:border-foreground/30 transition-all"
               data-testid={`blog-card-${b.id}`}
               data-cursor="hover"
             >
-              <div className="aspect-[16/10] overflow-hidden bg-white/5">
+              <div className="aspect-[16/10] overflow-hidden bg-card">
                 <img
                   src={b.cover}
                   alt={b.title}
@@ -48,17 +48,17 @@ const Blog = () => {
                 />
               </div>
               <div className="p-6">
-                <div className="flex justify-between items-center text-[10px] font-mono uppercase tracking-widest text-white/40 mb-4">
+                <div className="flex justify-between items-center text-[10px] font-mono uppercase tracking-widest text-foreground/40 mb-4">
                   <span>{b.tag}</span>
                   <span>{b.date} · {b.read}</span>
                 </div>
-                <h3 className="font-serif text-2xl md:text-3xl text-white leading-tight group-hover:italic transition-all">
+                <h3 className="font-serif text-2xl md:text-3xl text-foreground leading-tight group-hover:italic transition-all">
                   {b.title}
                 </h3>
-                <p className="mt-3 text-sm text-white/55 leading-relaxed">
+                <p className="mt-3 text-sm text-foreground/55 leading-relaxed">
                   {b.excerpt}
                 </p>
-                <div className="mt-6 inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-white/60 group-hover:text-white">
+                <div className="mt-6 inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-widest text-foreground/60 group-hover:text-foreground">
                   Read essay <ArrowUpRight size={12} />
                 </div>
               </div>

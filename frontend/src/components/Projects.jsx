@@ -24,27 +24,27 @@ const Projects = () => {
     <section
       id="projects"
       data-testid="projects-section"
-      className="relative py-24 md:py-32 px-6 md:px-10 border-t border-white/5"
+      className="relative py-16 md:py-28 px-6 md:px-10 border-t border-border"
     >
       <div className="max-w-[1400px] mx-auto">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-12">
           <div>
             <p className="eyebrow mb-4">// Selected work — 2023 → 2026</p>
-            <h2 className="hero-h text-5xl md:text-7xl text-white">
+            <h2 className="hero-h text-5xl md:text-7xl text-foreground">
               Recent <span className="italic">projects.</span>
             </h2>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <div className="flex items-center gap-2 border border-white/15 focus-within:border-white/50 px-4 py-2">
-              <Search size={14} className="text-white/40" />
+            <div className="flex items-center gap-2 border border-border focus-within:border-foreground/50 px-4 py-2">
+              <Search size={14} className="text-foreground/40" />
               <input
                 type="text"
                 value={q}
                 onChange={(e) => setQ(e.target.value)}
                 placeholder="Search stack..."
                 data-testid="projects-search"
-                className="bg-transparent outline-none text-xs font-mono uppercase tracking-widest text-white placeholder:text-white/30 w-40"
+                className="bg-transparent outline-none text-xs font-mono uppercase tracking-widest text-foreground placeholder:text-foreground/30 w-40"
               />
             </div>
             <div className="flex gap-1" data-testid="projects-filter">
@@ -56,8 +56,8 @@ const Projects = () => {
                   data-cursor="hover"
                   className={`text-[10px] font-mono uppercase tracking-widest px-4 py-2 border transition-all ${
                     cat === c
-                      ? "border-white bg-white text-black"
-                      : "border-white/15 text-white/60 hover:text-white hover:border-white/40"
+                      ? "border-foreground bg-foreground text-background"
+                      : "border-border text-foreground/60 hover:text-foreground hover:border-foreground/40"
                   }`}
                 >
                   {c}
@@ -108,7 +108,7 @@ const Projects = () => {
                       href={p.link || "#"}
                       target={p.link ? "_blank" : undefined}
                       rel={p.link ? "noopener noreferrer" : undefined}
-                      className="group h-full border border-white/10 bg-[#0a0a0a] hover:border-white/30 transition-all overflow-hidden flex flex-col block"
+                      className="group h-full border border-border bg-card hover:border-foreground/30 transition-all overflow-hidden flex flex-col block"
                       data-cursor="hover"
                     >
                       <div className="relative aspect-[16/10] overflow-hidden">
@@ -117,25 +117,25 @@ const Projects = () => {
                           alt={p.title}
                           className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                         />
-                        <div className="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-widest bg-black/60 backdrop-blur px-2 py-1">
+                        <div className="absolute top-3 left-3 text-[10px] font-mono uppercase tracking-widest bg-background/80 backdrop-blur px-2 py-1 text-foreground">
                           {p.category}
                         </div>
-                        <div className="absolute top-3 right-3 text-[10px] font-mono text-white/70 bg-black/60 backdrop-blur px-2 py-1">
+                        <div className="absolute top-3 right-3 text-[10px] font-mono text-foreground/70 bg-background/80 backdrop-blur px-2 py-1">
                           {p.year}
                         </div>
                       </div>
                       <div className="p-5 md:p-6 flex-1 flex flex-col justify-between">
                         <div>
                           <div className="flex items-start justify-between gap-4">
-                            <h3 className="font-serif text-2xl md:text-3xl text-white leading-tight">
+                            <h3 className="font-serif text-2xl md:text-3xl text-foreground leading-tight">
                               {p.title}
                             </h3>
                             <ArrowUpRight
                               size={20}
-                              className="text-white/40 group-hover:text-white group-hover:-translate-y-1 group-hover:translate-x-1 transition-all"
+                              className="text-foreground/40 group-hover:text-foreground group-hover:-translate-y-1 group-hover:translate-x-1 transition-all"
                             />
                           </div>
-                          <p className="mt-3 text-sm text-white/60 leading-relaxed">
+                          <p className="mt-3 text-sm text-foreground/60 leading-relaxed">
                             {p.description}
                           </p>
                         </div>
@@ -143,7 +143,7 @@ const Projects = () => {
                           {p.stack.map((t) => (
                             <span
                               key={t}
-                              className="text-[9px] font-mono uppercase tracking-widest px-2 py-1 border border-white/10 text-white/50"
+                              className="text-[9px] font-mono uppercase tracking-widest px-2 py-1 border border-border text-foreground/50"
                             >
                               {t}
                             </span>
@@ -159,7 +159,7 @@ const Projects = () => {
         </motion.div>
 
         {filtered.length === 0 && (
-          <div className="py-24 text-center text-white/40 font-mono text-xs uppercase tracking-widest">
+          <div className="py-24 text-center text-foreground/40 font-mono text-xs uppercase tracking-widest">
             No projects matched. Try a different filter.
           </div>
         )}

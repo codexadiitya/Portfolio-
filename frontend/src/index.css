@@ -6,6 +6,33 @@
 
 @layer base {
     :root {
+        --background: 36 30% 96%;
+        --foreground: 0 0% 8%;
+        --card: 36 20% 93%;
+        --card-foreground: 0 0% 8%;
+        --popover: 36 20% 93%;
+        --popover-foreground: 0 0% 8%;
+        --primary: 0 0% 8%;
+        --primary-foreground: 36 30% 96%;
+        --secondary: 0 0% 90%;
+        --secondary-foreground: 0 0% 8%;
+        --muted: 0 0% 90%;
+        --muted-foreground: 0 0% 40%;
+        --accent: 0 0% 90%;
+        --accent-foreground: 0 0% 8%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 0 0% 82%;
+        --input: 0 0% 82%;
+        --ring: 0 0% 8%;
+        --radius: 0.25rem;
+        --contrib-0: #e9e4d9;
+        --contrib-1: #d6cfbe;
+        --contrib-2: #a49b85;
+        --contrib-3: #5c574c;
+        --contrib-4: #141414;
+    }
+    .dark {
         --background: 0 0% 2%;
         --foreground: 0 0% 93%;
         --card: 0 0% 6.7%;
@@ -25,14 +52,18 @@
         --border: 0 0% 13%;
         --input: 0 0% 13%;
         --ring: 0 0% 83%;
-        --radius: 0.25rem;
+        --contrib-0: #111;
+        --contrib-1: #2a2a2a;
+        --contrib-2: #555;
+        --contrib-3: #9a9a9a;
+        --contrib-4: #ededed;
     }
 }
 
 html,
 body {
-    background: #050505;
-    color: #ededed;
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
     font-family: "Manrope", -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -45,8 +76,8 @@ body {
 }
 
 ::selection {
-    background: #ededed;
-    color: #050505;
+    background: hsl(var(--foreground));
+    color: hsl(var(--background));
 }
 
 /* Subtle grain overlay */
