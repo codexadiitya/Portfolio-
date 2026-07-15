@@ -14,7 +14,7 @@ export const PROFILE = {
     { label: "GitHub", handle: "adityadiwan", href: "https://github.com/adityadiwan" },
     { label: "LinkedIn", handle: "in/adityadiwan28", href: "https://linkedin.com/in/adityadiwan28" },
     { label: "Discord", handle: "aditya", href: "854936390303612949 " },
-    { label: "X / Twitter", handle: "@alex_mercer", href: "https://x.com" },
+    { label: "X / Twitter", handle: "@adityadiwan", href: "https://x.com" },
   ],
 };
 
@@ -240,7 +240,7 @@ export const BLOG = [
 export const TESTIMONIALS = [
   {
     quote:
-      "Rare combination. Alex writes the code, designs the pixels, and still finds time to argue about kerning.",
+      "Rare combination. Aditya writes the code, designs the pixels, and still finds time to argue about kerning.",
     author: "Lena Ortiz",
     role: "CTO, Novus Labs",
   },

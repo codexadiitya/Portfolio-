@@ -32,7 +32,7 @@ const Navbar = ({ onOpenPalette }) => {
             <div className="w-2 h-2 bg-white -rotate-45" />
           </div>
           <span className="font-mono text-xs tracking-[0.2em] uppercase text-white/70">
-            Alex&nbsp;/&nbsp;<span className="text-white">Mercer</span>
+            Aditya&nbsp;/&nbsp;<span className="text-white">Diwan</span>
           </span>
         </a>
 

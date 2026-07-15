@@ -29,12 +29,12 @@ const Loader = ({ onDone }) => {
         data-testid="page-loader"
       >
         <div className="flex justify-between text-[10px] font-mono uppercase tracking-widest text-white/50">
-          <span>Alex Mercer — Portfolio 2026</span>
+          <span>Aditya Diwan — Portfolio 2026</span>
           <span>Berlin</span>
         </div>
         <div className="text-center">
           <div className="hero-h text-[18vw] md:text-[10vw] text-white leading-[0.85]">
-            <span className="italic">alex</span>mercer
+            <span className="italic">aditya</span>diwan
           </div>
         </div>
         <div>
