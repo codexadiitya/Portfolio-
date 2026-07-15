@@ -29,7 +29,7 @@ const Navbar = ({ onOpenPalette }) => {
       <nav className="max-w-[1400px] mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
         <a href="#home" data-testid="nav-logo" className="flex items-center gap-3">
           <div className="w-8 h-8 border border-foreground/30 rotate-45 flex items-center justify-center">
-            <div className="w-2 h-2 bg-[hsl(var(--accent))] -rotate-45" />
+            <div className="w-2 h-2 bg-foreground -rotate-45" />
           </div>
           <span className="font-mono text-xs tracking-[0.2em] uppercase text-foreground/70">
             Aditya&nbsp;/&nbsp;<span className="text-foreground">Diwan</span>

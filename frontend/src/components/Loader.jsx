@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const words = [
-  "Namaste",
+  "नमस्ते",
   "Hello",
   "Bonjour"
 ];
