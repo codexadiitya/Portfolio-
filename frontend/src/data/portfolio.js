@@ -20,20 +20,20 @@ export const PROFILE = {
 
 export const SERVICES = [
   {
-    id: "ml",
-    number: "01",
-    title: "Machine Learning",
-    body:
-      "Training, fine-tuning and shipping small language models, RAG pipelines and computer vision systems into production.",
-    tools: ["PyTorch", "LangChain", "Vec DBs", "ONNX"],
-  },
-  {
     id: "fs",
-    number: "02",
+    number: "01",
     title: "Full-Stack Engineering",
     body:
       "End-to-end product engineering with a bias for elegance — from Postgres schemas to accessible React interfaces.",
     tools: ["Next.js", "Node", "Postgres", "Redis"],
+  },
+  {
+    id: "ml",
+    number: "02",
+    title: "Machine Learning",
+    body:
+      "Training, fine-tuning and shipping small language models, RAG pipelines and computer vision systems into production.",
+    tools: ["PyTorch", "LangChain", "Vec DBs", "ONNX"],
   },
   {
     id: "design",
@@ -42,14 +42,6 @@ export const SERVICES = [
     body:
       "Editorial, typography-first product design. I ship in Figma, then in code, without loss of intent.",
     tools: ["Figma", "Motion", "Tokens"],
-  },
-  {
-    id: "full",
-    number: "04",
-    title: "The Full Package",
-    body:
-      "Rare mix of design fluency, engineering depth and ML literacy — one person, one bill, one vision.",
-    tools: ["Strategy", "Craft", "Delivery"],
   },
 ];
 
