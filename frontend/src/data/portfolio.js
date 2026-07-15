@@ -47,6 +47,19 @@ export const SERVICES = [
 
 export const PROJECTS = [
   {
+    id: "p0",
+    slug: "portfolio",
+    title: "Editorial Portfolio",
+    year: "2026",
+    category: "Web",
+    stack: ["React", "Tailwind CSS", "Framer Motion", "Lenis"],
+    description:
+      "A premium, dark editorial developer portfolio website with smooth momentum scroll, 3D card tilt glare, custom cursor, and built-in command palette.",
+    image:
+      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?crop=entropy&cs=srgb&fm=jpg&q=85",
+    featured: true,
+  },
+  {
     id: "p1",
     slug: "helios",
     title: "Helios Analytics",
