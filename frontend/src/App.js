@@ -22,7 +22,7 @@ import Loader from "./components/Loader";
 function App() {
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [loading, setLoading] = useState(true);
-  const [theme, setTheme] = useState("dark"); // Default theme is dark
+  const [theme, setTheme] = useState("light"); // Default theme is light
 
   useEffect(() => {
     // Fallback in case loader doesn't finish for any reason

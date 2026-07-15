@@ -34,14 +34,14 @@ const Experience = () => {
               data-testid={`experience-${i}`}
             >
               <div className="absolute left-0 top-1 w-5 h-5 rounded-full border border-foreground/30 bg-background flex items-center justify-center">
-                <div className="w-1.5 h-1.5 rounded-full bg-foreground" />
+                <div className="w-1.5 h-1.5 rounded-full bg-[hsl(var(--accent))]" />
               </div>
               <div className="font-mono text-[10px] uppercase tracking-widest text-foreground/40">
                 {e.year}
               </div>
               <div className="mt-2 font-serif text-3xl md:text-4xl text-foreground">
                 {e.role},{" "}
-                <span className="italic text-foreground/60">{e.company}</span>
+                <span className="italic text-[hsl(var(--accent))]">{e.company}</span>
               </div>
               <p className="mt-3 text-sm text-foreground/60 leading-relaxed max-w-2xl">
                 {e.body}

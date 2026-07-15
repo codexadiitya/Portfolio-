@@ -1,53 +1,66 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+const words = [
+  "Hello",      // English
+  "Bonjour",    // French
+  "Ciao",       // Italian
+  "Olá",        // Portuguese
+  "Hallo",      // German
+  "Konnichiwa", // Japanese
+  "Nǐ Hǎo",     // Chinese
+  "Namaste",    // Hindi
+  "नमस्ते"       // Devnagari Namaste
+];
+
 const Loader = ({ onDone }) => {
-  const [p, setP] = useState(0);
+  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    const t = setInterval(() => {
-      setP((v) => {
-        const next = v + Math.random() * 8 + 3;
-        if (next >= 100) {
-          clearInterval(t);
-          setTimeout(onDone, 400);
-          return 100;
-        }
-        return next;
-      });
-    }, 80);
-    return () => clearInterval(t);
-  }, [onDone]);
+    if (index === words.length - 1) {
+      const t = setTimeout(onDone, 800);
+      return () => clearTimeout(t);
+    }
+    const t = setTimeout(
+      () => {
+        setIndex((i) => i + 1);
+      },
+      index === 0 ? 350 : 150
+    );
+    return () => clearTimeout(t);
+  }, [index, onDone]);
 
   return (
     <AnimatePresence>
       <motion.div
-        initial={{ opacity: 1 }}
-        exit={{ opacity: 0, y: -30 }}
-        transition={{ duration: 0.6 }}
-        className="fixed inset-0 z-[200] bg-[#050505] flex flex-col justify-between p-6 md:p-10"
+        initial={{ y: 0 }}
+        exit={{ y: "-100vh" }}
+        transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
+        className="fixed inset-0 z-[200] bg-[#050505] flex flex-col justify-between p-6 md:p-10 text-white"
         data-testid="page-loader"
       >
         <div className="flex justify-between text-[10px] font-mono uppercase tracking-widest text-white/50">
           <span>Aditya Diwan — Portfolio 2026</span>
-          <span>Berlin</span>
+          <span>Raipur, India</span>
         </div>
-        <div className="text-center">
-          <div className="hero-h text-[18vw] md:text-[10vw] text-white leading-[0.85]">
-            <span className="italic">aditya</span>diwan
-          </div>
+
+        <div className="flex items-center justify-center flex-1">
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -30 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="flex items-center gap-4 text-5xl md:text-7xl font-serif italic text-white"
+          >
+            <span className="w-2.5 h-2.5 rounded-full bg-white block animate-pulse" />
+            <span>{words[index]}</span>
+          </motion.div>
         </div>
-        <div>
-          <div className="flex justify-between text-[10px] font-mono uppercase tracking-widest text-white/50 mb-3">
-            <span>Loading assets</span>
-            <span>{Math.floor(p)}%</span>
-          </div>
-          <div className="h-px w-full bg-white/10 relative overflow-hidden">
-            <div
-              className="absolute inset-y-0 left-0 bg-white"
-              style={{ width: `${p}%`, transition: "width 0.2s ease-out" }}
-            />
-          </div>
+
+        <div className="flex justify-between items-end text-[10px] font-mono uppercase tracking-widest text-white/40">
+          <span>Loading Experience</span>
+          <span>{String(Math.round(((index + 1) / words.length) * 100))}%</span>
         </div>
       </motion.div>
     </AnimatePresence>
