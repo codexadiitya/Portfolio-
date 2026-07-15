@@ -1,6 +1,14 @@
-# Memory Companion Application
+# Aditya Diwan — Developer Portfolio (2026)
 
-A full-stack, premium developer log and memory vault application featuring a FastAPI Python backend and a React Tailwind CSS frontend.
+A dark editorial, bold typographic personal portfolio website built with React, Tailwind CSS, Framer Motion, and Lenis.
+
+## License & Copyright
+
+⚠️ **Proprietary & Confidential**
+
+All rights reserved. The code, designs, and content in this repository are proprietary. **No license is granted for open-source use, redistribution, or modification.**
+
+---
 
 ## Project Structure
 
@@ -12,6 +20,8 @@ app/
 │   └── server.py
 ├── frontend/           # React Frontend App
 │   ├── src/
+│   │   ├── components/  # Page sections (Hero, About, Projects, etc.)
+│   │   ├── data/        # portfolio.js (Profile details and data)
 │   │   ├── App.css
 │   │   ├── App.js
 │   │   ├── index.css
@@ -19,32 +29,24 @@ app/
 │   ├── .env
 │   ├── package.json
 │   └── tailwind.config.js
-├── memory/             # Local database JSON storage
-├── tests/              # Backend Test Suite
-│   └── test_server.py
 ```
 
-## Running the Application
+---
 
-### 1. Run the Backend Server
-```bash
-cd backend
-pip install -r requirements.txt
-python server.py
-```
-The server will start at [http://127.0.0.1:8000](http://127.0.0.1:8000).
+## Getting Started
 
-### 2. Run the Frontend Client
+### 1. Build the Frontend
+To compile the static production build:
 ```bash
 cd frontend
-npm install
+npm install --legacy-peer-deps
+npm run build
+```
+
+### 2. Run Locally in Development Mode
+To start the hot-reloading development server:
+```bash
+cd frontend
 npm start
 ```
-The frontend application will start at [http://localhost:3000](http://localhost:3000).
-
-### 3. Run Backend Tests
-To execute unit tests:
-```bash
-cd backend
-pytest
-```
+The preview will open automatically at [http://localhost:3000](http://localhost:3000).
