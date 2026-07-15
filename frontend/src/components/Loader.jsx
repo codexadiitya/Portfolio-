@@ -52,9 +52,19 @@ const Loader = ({ onDone }) => {
           </motion.div>
         </div>
 
-        <div className="flex justify-between items-end text-[10px] font-mono uppercase tracking-widest text-white/40">
-          <span>Loading Experience</span>
-          <span>{String(Math.round(((index + 1) / words.length) * 100))}%</span>
+        <div className="w-full">
+          <div className="flex justify-between text-[10px] font-mono uppercase tracking-widest text-white/40 mb-3">
+            <span>Loading Experience</span>
+            <span>{String(Math.round(((index + 1) / words.length) * 100))}%</span>
+          </div>
+          <div className="h-px w-full bg-white/10 relative overflow-hidden">
+            <motion.div
+              initial={{ width: "0%" }}
+              animate={{ width: `${((index + 1) / words.length) * 100}%` }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="absolute inset-y-0 left-0 bg-[#DFBA73]"
+            />
+          </div>
         </div>
       </motion.div>
     </AnimatePresence>
