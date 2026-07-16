@@ -6,8 +6,7 @@ export const PROFILE = {
   location: "Raipur Chhattisgarh, India",
   email: "adityadiwan2005@gmail.com",
   bio: "I engineer bespoke digital products that live at the intersection of craft, systems and machine intelligence. Currently obsessed with agentic UX and typography.",
-  availability: "Available for select 2026 projects",
-  resume: "#resume-demo",
+  availability: "Available for projects and full-time roles.",
   portrait: "/aditya_portrait.jpg",
   socials: [
     { label: "GitHub", handle: "codexadiitya", href: "https://github.com/codexadiitya" },
@@ -145,13 +144,6 @@ export const PROJECTS = [
 export const EXPERIENCE = [
   {
     year: "2026",
-    role: "Lead Product Engineer",
-    company: "Novus Labs",
-    body:
-      "Leading a 5-person squad shipping an agentic browser for research teams. Design + ML + platform.",
-  },
-  {
-    year: "2025",
     role: "Sr. Full-Stack Engineer",
     company: "Ainocular",
     body:
@@ -164,15 +156,9 @@ export const EXPERIENCE = [
     body:
       "Migrated a 12-service monolith to Postgres + event sourcing. Cut cloud spend by 41% in the first quarter.",
   },
+ 
   {
-    year: "2023",
-    role: "Frontend Engineer (Contract)",
-    company: "AARP Communication",
-    body:
-      "Shipped a subscriber-management planner for 10 internal departments; reduced paper usage by 75%.",
-  },
-  {
-    year: "2022",
+    year: "2024",
     role: "Freelance",
     company: "Independent",
     body:
@@ -181,13 +167,13 @@ export const EXPERIENCE = [
 ];
 
 export const SKILLS = [
-  { name: "TypeScript", level: 95 },
-  { name: "React / Next.js", level: 96 },
-  { name: "Node / Bun", level: 88 },
-  { name: "Python / PyTorch", level: 84 },
+  { name: "TypeScript", level: 90 },
+  { name: "React / Next.js", level: 89 },
+  { name: "Node / Bun", level: 80 },
+  { name: "Python / PyTorch", level: 88 },
   { name: "Postgres / Redis", level: 82 },
   { name: "Figma / Design Systems", level: 90 },
-  { name: "Rust", level: 62 },
+  { name: "Rust", level: 50 },
   { name: "LLM / RAG", level: 87 },
 ];
 
