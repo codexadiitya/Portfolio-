@@ -85,7 +85,7 @@ const Hero = () => {
             </p>
             <div className="mt-6 flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-foreground/40">
               <MapPin size={12} />
-              Berlin&nbsp;/&nbsp;Remote
+              Raipur&nbsp;/&nbsp;Remote
             </div>
           </div>
         </motion.div>

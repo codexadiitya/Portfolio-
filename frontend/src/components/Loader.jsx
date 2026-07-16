@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 const words = [
   "नमस्ते",
   "Hello",
-  "Bonjour"
-  "KON'NICHIWA"
+  "Bonjour",
+  "KONINCHWA"
 ];
 
 const Loader = ({ onDone }) => {
