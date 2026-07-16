@@ -96,8 +96,7 @@ export const PROJECTS = [
     link: "https://ssipmtportal.netlify.app/",
     description:
       "An interactive student and academic management portal for SSIPMT. (Under Development)",
-    image:
-      "https://images.unsplash.com/photo-1517241034903-9a4c3ab12f00?crop=entropy&cs=srgb&fm=jpg&q=85",
+    image: "/ssipmt_portal.png",
     featured: false,
   },
   {
