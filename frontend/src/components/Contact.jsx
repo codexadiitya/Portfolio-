@@ -65,7 +65,7 @@ const Contact = () => {
 
           <p className="mt-8 text-sm md:text-base text-foreground/60 leading-relaxed max-w-md">
             Freelance, contract, or a full-time conversation — I read every note
-            that lands in my inbox. Typically I reply within 24 hours (CET
+            that lands in my inbox. Typically I reply within 24 hours (IST
             hours, obviously).
           </p>
 
