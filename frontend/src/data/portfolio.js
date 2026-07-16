@@ -10,9 +10,9 @@ export const PROFILE = {
   resume: "#resume-demo",
   portrait: "/aditya_portrait.jpg",
   socials: [
-    { label: "GitHub", handle: "adityadiwan", href: "https://github.com/adityadiwan" },
-    { label: "LinkedIn", handle: "in/adityadiwan28", href: "https://linkedin.com/in/adityadiwan28" },
-    { label: "Discord", handle: "aditya", href: "854936390303612949 " },
+    { label: "GitHub", handle: "codexadiitya", href: "https://github.com/codexadiitya" },
+    { label: "LinkedIn", handle: "in/adityadiwan28", href: "https://www.linkedin.com/in/adityadiwan28" },
+    { label: "Discord", handle: "aditya", href: "https://discord.com/users/854936390303612949" },
     { label: "X / Twitter", handle: "@adityadiwan", href: "https://x.com" },
   ],
 };
