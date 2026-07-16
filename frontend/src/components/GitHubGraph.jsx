@@ -71,8 +71,7 @@ const GitHubGraph = () => {
                   {w.map((v, di) => (
                     <div
                       key={di}
-                      className="contrib"
-                      style={{ background: shades[v] }}
+                      className={`contrib contrib-${v} cursor-pointer`}
                       title={`${v} contributions`}
                     />
                   ))}
@@ -83,7 +82,7 @@ const GitHubGraph = () => {
               <span>Less</span>
               <div className="flex gap-1">
                 {shades.map((c, i) => (
-                  <div key={i} className="contrib" style={{ background: c }} />
+                  <div key={i} className={`contrib contrib-${i}`} />
                 ))}
               </div>
               <span>More</span>
