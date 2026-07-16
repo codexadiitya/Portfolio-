@@ -8,16 +8,31 @@ const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [copied, setCopied] = useState(false);
 
-  const submit = (e) => {
+  const [sending, setSending] = useState(false);
+
+  const submit = async (e) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) {
       toast.error("Fill out all three fields — I read every one.");
       return;
     }
-    toast.success("Message received. This is a demo — no email actually sent.", {
-      description: `Thanks ${form.name.split(" ")[0]}, I'll pretend to reply within 24h.`,
-    });
-    setForm({ name: "", email: "", message: "" });
+    setSending(true);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Failed to send");
+      toast.success("Message sent.", {
+        description: `Thanks ${form.name.split(" ")[0]}, I'll reply within 24h.`,
+      });
+      setForm({ name: "", email: "", message: "" });
+    } catch (err) {
+      toast.error("Something went wrong sending that. Try emailing me directly.");
+    } finally {
+      setSending(false);
+    }
   };
 
   const copyEmail = async () => {
@@ -122,19 +137,17 @@ const Contact = () => {
           </div>
           <button
             type="submit"
+            disabled={sending}
             data-testid="contact-submit"
             data-cursor="hover"
-            className="group mt-4 self-start inline-flex items-center gap-3 border border-foreground/30 hover:border-foreground hover:bg-foreground hover:text-background transition-all px-8 py-3 text-xs font-mono tracking-widest uppercase text-foreground"
+            className="group mt-4 self-start inline-flex items-center gap-3 border border-foreground/30 hover:border-foreground hover:bg-foreground hover:text-background transition-all px-8 py-3 text-xs font-mono tracking-widest uppercase text-foreground disabled:opacity-50"
           >
-            Send message
+            {sending ? "Sending..." : "Send message"}
             <Send
               size={14}
               className="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
             />
           </button>
-          <p className="text-[10px] font-mono uppercase tracking-widest text-foreground/30">
-            Demo mode — no email is actually sent.
-          </p>
         </form>
       </div>
     </section>
