@@ -52,7 +52,7 @@ export const PROJECTS = [
     year: "2026",
     category: "Web",
     stack: ["React", "Tailwind CSS", "Framer Motion", "Lenis"],
-    link: "https://bharat-live.vercel.app",
+    link: "https://aditya-devin.vercel.app/",
     description:
       "A premium, dark editorial developer portfolio website with smooth momentum scroll, 3D card tilt glare, custom cursor, and built-in command palette.",
     image: "/aditya_portfolio_preview.jpg",
