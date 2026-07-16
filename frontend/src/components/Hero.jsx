@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { PROFILE } from "../data/portfolio";
 
-const rotatingTitles = ["FULL-STACK DEVELOPER.", "ML ENGINEER.", "INTERFACE DESIGNER.", "SYSTEMS THINKER."];
+const rotatingTitles = ["ASPIRING SOFTWARE DEVELOPER.", "FULL-STACK DEVELOPER..", "INTERFACE DESIGNER.", "SYSTEMS THINKER."];
 
 const Hero = () => {
   const [idx, setIdx] = useState(0);
@@ -30,7 +30,7 @@ const Hero = () => {
     const upd = () =>
       setTime(
         new Date().toLocaleTimeString("en-DE", {
-          timeZone: "Europe/Berlin",
+          timeZone: "Asia/Kolkata",
           hour: "2-digit",
           minute: "2-digit",
           hour12: false,
@@ -54,8 +54,8 @@ const Hero = () => {
           {PROFILE.availability}
         </div>
         <div className="hidden sm:block">
-          <span className="text-foreground/30">Berlin&nbsp;/&nbsp;</span>
-          <span data-testid="hero-clock">{time} CET</span>
+          <span className="text-foreground/30">Raipur&nbsp;/&nbsp;</span>
+          <span data-testid="hero-clock">{time} IST</span>
         </div>
       </div>
 

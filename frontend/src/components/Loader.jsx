@@ -5,6 +5,7 @@ const words = [
   "नमस्ते",
   "Hello",
   "Bonjour"
+  "KON'NICHIWA"
 ];
 
 const Loader = ({ onDone }) => {

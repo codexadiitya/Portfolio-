@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 import { PROFILE } from "../data/portfolio";
 
 const stats = [
-  { k: "07", v: "Years shipping" },
-  { k: "40+", v: "Products in production" },
+  { k: "02", v: "Years shipping" },
+  { k: "20+", v: "Products in production" },
   { k: "12", v: "Open-source repos" },
   { k: "∞", v: "Coffee shots" },
 ];
@@ -53,7 +53,7 @@ const About = () => {
               — one person, one bill, one uncompromising taste bar.
             </p>
             <p className="mt-8 text-sm md:text-base text-foreground/60 leading-relaxed max-w-2xl">
-              I've spent the last seven years shipping products for founders,
+              I've spent the last three years shipping products for founders,
               retailers and research labs. I care about typography as much as
               I care about tail latencies. If it's on the page — pixel, packet,
               or paragraph — I want to know why.
