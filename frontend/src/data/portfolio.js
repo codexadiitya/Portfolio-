@@ -74,16 +74,15 @@ export const PROJECTS = [
   },
   {
     id: "p2",
-    slug: "obscura",
-    title: "Obscura Model Studio",
-    year: "2025",
-    category: "ML",
-    stack: ["PyTorch", "FastAPI", "React"],
-    link: "https://github.com/codexadiitya",
+    slug: "bharat-live",
+    title: "Bharat Live",
+    year: "2026",
+    category: "Web",
+    stack: ["React", "Tailwind CSS", "Vercel", "Framer Motion"],
+    link: "https://bharat-live.vercel.app",
     description:
-      "A visual playground to fine-tune diffusion and small language models with a single YAML file.",
-    image:
-      "https://images.unsplash.com/photo-1666027092835-7e668416b7c8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHwzfHxtaW5pbWFsaXN0JTIwZGFyayUyMGRhc2hib2FyZCUyMHVpfGVufDB8fHx8MTc4NDEyNTU5Mnww&ixlib=rb-4.1.0&q=85",
+      "A real-time interactive news aggregator and map explorer for India. Read what's happening on the ground by selecting states or asking BharatBot.",
+    image: "/bharat_live.png",
     featured: true,
   },
   {
