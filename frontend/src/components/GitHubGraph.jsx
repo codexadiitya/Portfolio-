@@ -45,7 +45,7 @@ const GitHubGraph = () => {
               </div>
             </div>
             <div>
-              <div className="font-serif text-3xl text-foreground">42</div>
+              <div className="font-serif text-3xl text-foreground">20</div>
               <div className="text-[10px] font-mono uppercase tracking-widest text-foreground/40 mt-1">
                 Public repos
               </div>
