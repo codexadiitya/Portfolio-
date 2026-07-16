@@ -65,7 +65,7 @@ export const PROJECTS = [
     year: "2026",
     category: "Web",
     stack: ["Next.js 15", "Postgres", "tRPC", "Tailwind"],
-    link: "https://github.com/codexadiitya",
+    link: "",
     description:
       "A real-time observability dashboard for LLM applications. Traces, evals and cost — in one bento canvas.",
     image:
@@ -105,11 +105,11 @@ export const PROJECTS = [
     year: "2024",
     category: "ML",
     stack: ["Python", "Qdrant", "OpenAI"],
-    link: "https://github.com/codexadiitya",
+    link: "",
     description:
       "Semantic search across 12M product SKUs with a 42ms p95 — replaced a legacy ElasticSearch cluster.",
     image:
-      "https://images.unsplash.com/photo-1622737133809-d95047b9e673?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMDNkJTIwYXJ0JTIwZGFya3xlbnwwfHx8fDE3ODQxMjU1OTJ8MA&ixlib=rb-4.1.0&q=85",
+      "https://images.unsplash.com/photo-1622737133809-d95047b9e673?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NzkxODd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMDNkJTIwYXJ0JTIwZGFya3xlbnwwfHx8fDE3ODQxMjU1OTJ8MA&ixlib=rb-4.1.0&q=85",
     featured: false,
   },
   {
@@ -119,7 +119,7 @@ export const PROJECTS = [
     year: "2024",
     category: "Web",
     stack: ["React", "SQLite", "Tauri"],
-    link: "https://github.com/codexadiitya",
+    link: "",
     description:
       "An offline-first, local-first personal finance OS. Zero SaaS, zero telemetry, one binary.",
     image:
@@ -133,7 +133,7 @@ export const PROJECTS = [
     year: "2023",
     category: "Design",
     stack: ["Astro", "GSAP", "Cloudflare"],
-    link: "https://github.com/codexadiitya",
+    link: "",
     description:
       "A specimen site for an independent type foundry — an editorial exercise in restraint and rhythm.",
     image:

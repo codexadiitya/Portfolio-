@@ -84,6 +84,7 @@ const Projects = () => {
                   : i % 5 === 3
                   ? "col-span-12 md:col-span-4"
                   : "col-span-12 md:col-span-4";
+              const CardComponent = p.link ? "a" : "div";
               return (
                 <motion.div
                   key={p.id}
@@ -104,12 +105,14 @@ const Projects = () => {
                     perspective={1400}
                     className="h-full"
                   >
-                    <a
-                      href={p.link || "#"}
+                    <CardComponent
+                      href={p.link || undefined}
                       target={p.link ? "_blank" : undefined}
                       rel={p.link ? "noopener noreferrer" : undefined}
-                      className="group h-full border border-border bg-card hover:border-foreground/30 transition-all overflow-hidden flex flex-col block"
-                      data-cursor="hover"
+                      className={`group h-full border border-border bg-card transition-all overflow-hidden flex flex-col ${
+                        p.link ? "hover:border-foreground/30 cursor-pointer" : "cursor-default"
+                      }`}
+                      data-cursor={p.link ? "hover" : undefined}
                     >
                       <div className="relative aspect-[16/10] overflow-hidden">
                         <img
@@ -130,10 +133,12 @@ const Projects = () => {
                             <h3 className="font-serif text-2xl md:text-3xl text-foreground leading-tight">
                               {p.title}
                             </h3>
-                            <ArrowUpRight
-                              size={20}
-                              className="text-foreground/40 group-hover:text-foreground group-hover:-translate-y-1 group-hover:translate-x-1 transition-all"
-                            />
+                            {p.link && (
+                              <ArrowUpRight
+                                size={20}
+                                className="text-foreground/40 group-hover:text-foreground group-hover:-translate-y-1 group-hover:translate-x-1 transition-all"
+                              />
+                            )}
                           </div>
                           <p className="mt-3 text-sm text-foreground/60 leading-relaxed">
                             {p.description}
@@ -150,7 +155,7 @@ const Projects = () => {
                           ))}
                         </div>
                       </div>
-                    </a>
+                    </CardComponent>
                   </Tilt>
                 </motion.div>
               );
